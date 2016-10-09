@@ -11,6 +11,8 @@ html {
 }
 body {
   margin: 0;
+  background-image: url(sinercia-fondo.jpg);
+  background-attachment: fixed;
   /*background: url("../../fondo010.jpg");*/
 }
 article,
