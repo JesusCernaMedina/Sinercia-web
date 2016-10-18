@@ -48,8 +48,8 @@
 						</div>
 						<!-- Links: Iniciar sesion y registrarse del navbar-->
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#inicia-sesion">Inicia Sesion</a></li>
-							<li><a href="#registrate">Registrate</a></li>
+							<li><a href="#inicia-sesion" data-toggle="modal" data-target="#sesion">Inicia Sesion</a></li>
+							<li><a href="#registrar" data-toggle="modal" data-target="#registro">Registrate</a></li>
 						</ul>
 					</div>
 				</div>
@@ -83,6 +83,8 @@
   		</div>
 	</div>
 
+	<!-- Slider Sinercia Fotos album -->
+
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
@@ -113,16 +115,147 @@
 	    </div>
 	  </div>
 
-	  <!-- Controls -->
+	  <!-- Controles, desplazamiento Slider -->
 	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
+	    <span class="sr-only">Anterior</span>
 	  </a>
 	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
+	    <span class="sr-only">Siguiente</span>
 	  </a>
 	</div>
+
+	<!-- Ventana JS Inicia Sesion -->
+	<div class="modal fade" id="sesion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">Inicia Sesion</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<!-- Inicia Formulario -->
+	        <form class="form-horizontal">
+			  <div class="form-group">
+			    
+			    <div class="col-sm-12">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Nombre de usuario">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    
+			    <div class="col-sm-12">
+			      <input type="password" class="form-control" id="inputPassword3" placeholder="Clave">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-10">
+			      <div >
+			        <label>
+			          <a href="#registro" data-toggle="modal" data-target="#registro" data-dismiss="modal">¿Aun no tienes cuenta? ¡Registrate!</a>
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Iniciar Sesion</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Ventana JS Registrarse -->
+	<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">Registrate en SINERCIA</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<!-- Inicia Formulario -->
+	        <form class="form-horizontal">
+	          <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="text" class="form-control" placeholder="Apellido(s)">
+			    </div>
+			  </div>
+	          <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="text" class="form-control" placeholder="Nombre(s)">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="text" class="form-control" placeholder="Nombre de usuario">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Correo">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="password" class="form-control" id="inputPassword3" placeholder="Clave">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-12">
+			    <h5>Sexo</h5>
+			    	<input type="radio" name="gender" value="M"> Masculino
+			     	<input type="radio" name="gender" value="F"> Femenino
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-12">
+			      <input type="tel" class="form-control" placeholder="Telefono">
+			    </div>
+			  </div>
+			  <div class="checkbox">
+      			<h5 class="text-center">¿Que instrumento tocas?</h5>
+      			<label>
+        			<input type="checkbox"> Bateria
+      			</label>
+
+      			<label>
+      				<input type="checkbox"> Teclado
+      			</label>
+      			
+      			<label>
+      				<input type="checkbox"> Guitarra
+      			</label>
+      			
+      			<label>
+      				<input type="checkbox"> Bajo
+      			</label>
+      			
+      			<label>
+      				<input type="checkbox" data-toggle="collapse" data-target="#otros" aria-expanded="false" aria-controls="otros"> Otros
+      			</label>
+      			<div class="form-group">
+      				<div class="collapse col-sm-12" id="otros">
+  						<div class="well">
+							<input type="text" class="form-control" placeholder="Especifica cuales">
+  						</div>
+					</div>
+				</div>	
+    		  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-primary">Registrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
 
 	<!-- Termina el evento del boton buscar -->
 	<h4 class="container" style="color:white"><p>Esto es un texto de prueba</p></h4>
